@@ -9,7 +9,7 @@ export const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 text-xl font-bold mb-4">
               <Cloud className="h-6 w-6" />
-              CloudVault
+              K0MPLEXINARY
             </Link>
             <p className="text-sm text-muted-foreground">
               The modern way to manage and deliver your media.
@@ -45,7 +45,7 @@ export const Footer = () => {
         </div>
         
         <div className="pt-8 text-center text-sm text-muted-foreground">
-          © 2025 CloudVault. All rights reserved.
+          © 2025 K0MPLEXINARY. All rights reserved.
         </div>
       </div>
     </footer>

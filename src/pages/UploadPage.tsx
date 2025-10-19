@@ -106,12 +106,12 @@ const UploadPage = () => {
             )}
 
             <div className="mt-6 flex gap-3">
-              <Button onClick={handleUpload} disabled={uploading || selectedFiles.length === 0} className="flex-1">
+              <Button onClick={handleUpload} disabled={uploading || selectedFiles.length === 0} className="flex-1 bg-black">
                 {uploading ? "Uploading..." : "Upload Files"}
               </Button>
               <Button
-                variant="outline"
                 onClick={() => setSelectedFiles([])}
+                className="bg-black"
                 disabled={uploading || selectedFiles.length === 0}
               >
                 Cancel

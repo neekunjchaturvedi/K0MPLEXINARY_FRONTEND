@@ -16,7 +16,7 @@ export const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose CloudVault?
+              Why Choose K0MPLEXINARY?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               We're not just another cloud storage provider. We're a complete

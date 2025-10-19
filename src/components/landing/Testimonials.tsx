@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Creative Director",
     company: "PixelStudio",
-    content: "CloudVault transformed how we manage our client assets. The speed and reliability are unmatched.",
+    content: "K0MPLEXINARY transformed how we manage our client assets. The speed and reliability are unmatched.",
     rating: 5,
   },
   {
@@ -34,7 +34,7 @@ export const Testimonials = () => {
             Loved by Thousands
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See what our customers have to say about CloudVault
+            See what our customers have to say about K0MPLEXINARY
           </p>
         </div>
 

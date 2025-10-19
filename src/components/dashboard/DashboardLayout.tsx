@@ -2,7 +2,14 @@ import { ReactNode } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { Cloud, LayoutDashboard, Image, Upload, Settings, LogOut } from "lucide-react";
+import {
+  Cloud,
+  LayoutDashboard,
+  Image,
+  Upload,
+  Settings,
+  LogOut,
+} from "lucide-react";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -30,11 +37,14 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <div className="min-h-screen flex">
       {/* Sidebar */}
-      <aside className="w-64 border-r border-border bg-card">
-        <div className="p-6 border-b border-border">
-          <Link to="/dashboard" className="flex items-center gap-2 text-xl font-bold">
+      <aside className="w-64 border-r border-gray-800">
+        <div className="p-6 border-b border-gray-800">
+          <Link
+            to="/dashboard"
+            className="flex items-center gap-2 text-xl font-bold"
+          >
             <Cloud className="h-6 w-6" />
-            CloudVault
+            K0MPLEXINARY
           </Link>
         </div>
 
@@ -52,12 +62,12 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           ))}
         </nav>
 
-        <div className="absolute bottom-0 left-0 right-0 w-64 p-4 border-t border-border">
+        <div className="absolute bottom-0 left-0 right-0 w-64 p-4 border-t border-gray-800">
           <div className="mb-3 px-3">
             <div className="font-medium text-sm">{user?.name}</div>
             <div className="text-xs text-muted-foreground">{user?.email}</div>
           </div>
-          <Button variant="ghost" className="w-full justify-start gap-3" onClick={handleLogout}>
+          <Button className="w-full justify-start gap-3" onClick={handleLogout}>
             <LogOut className="h-5 w-5" />
             Logout
           </Button>
@@ -65,9 +75,7 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
+      <main className="flex-1 overflow-auto">{children}</main>
     </div>
   );
 };

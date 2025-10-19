@@ -8,7 +8,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold">
           <Cloud className="h-6 w-6" />
-          CloudVault
+          K0MPLEXINARY
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -17,6 +17,12 @@ export const Navbar = () => {
             className="text-sm hover:text-gray-500 transition-colors"
           >
             Features
+          </a>
+          <a
+            href="#pricing"
+            className="text-sm hover:text-gray-500 transition-colors"
+          >
+            Pricing
           </a>
           <a
             href="#why-us"

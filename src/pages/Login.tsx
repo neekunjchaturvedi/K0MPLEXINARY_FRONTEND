@@ -44,7 +44,7 @@ const Login = () => {
             <Cloud className="h-12 w-12" />
           </div>
           <CardTitle className="text-2xl">Welcome Back</CardTitle>
-          <CardDescription>Sign in to your CloudVault account</CardDescription>
+          <CardDescription>Sign in to your K0MPLEXINARY account</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

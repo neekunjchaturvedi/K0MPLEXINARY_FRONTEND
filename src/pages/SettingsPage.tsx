@@ -1,5 +1,11 @@
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,7 +20,9 @@ const SettingsPage = () => {
       <div className="p-8 max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Settings</h1>
-          <p className="text-muted-foreground">Manage your account and preferences.</p>
+          <p className="text-muted-foreground">
+            Manage your account and preferences.
+          </p>
         </div>
 
         <Tabs defaultValue="profile" className="space-y-6">
@@ -33,11 +41,20 @@ const SettingsPage = () => {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" defaultValue={user?.name} />
+                  <Input
+                    id="name"
+                    defaultValue={user?.name}
+                    className="border-none text-white"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" defaultValue={user?.email} />
+                  <Input
+                    id="email"
+                    type="email"
+                    defaultValue={user?.email}
+                    className="outline-none text-white"
+                  />
                 </div>
                 <Button>Save Changes</Button>
               </CardContent>
@@ -48,20 +65,27 @@ const SettingsPage = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Storage Settings</CardTitle>
-                <CardDescription>Manage your storage usage and limits</CardDescription>
+                <CardDescription>
+                  Manage your storage usage and limits
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="text-sm font-medium">Storage Used</span>
-                      <span className="text-sm text-muted-foreground">45.2 GB / 100 GB</span>
+                      <span className="text-sm text-muted-foreground">
+                        45.2 GB / 100 GB
+                      </span>
                     </div>
                     <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <div className="h-full bg-primary" style={{ width: "45%" }} />
+                      <div
+                        className="h-full bg-primary"
+                        style={{ width: "45%" }}
+                      />
                     </div>
                   </div>
-                  <Button variant="outline">Upgrade Storage</Button>
+                  <Button >Upgrade Storage</Button>
                 </div>
               </CardContent>
             </Card>
@@ -71,16 +95,22 @@ const SettingsPage = () => {
             <Card>
               <CardHeader>
                 <CardTitle>API Keys</CardTitle>
-                <CardDescription>Manage your API keys for programmatic access</CardDescription>
+                <CardDescription>
+                  Manage your API keys for programmatic access
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="p-4 bg-secondary/50 rounded-lg">
                   <div className="flex justify-between items-center">
                     <div>
                       <div className="font-medium">Production Key</div>
-                      <div className="text-sm text-muted-foreground font-mono">cv_prod_•••••••••••••••</div>
+                      <div className="text-sm text-muted-foreground font-mono">
+                        cv_prod_•••••••••••••••
+                      </div>
                     </div>
-                    <Button size="sm" variant="outline">Regenerate</Button>
+                    <Button size="sm">
+                      Regenerate
+                    </Button>
                   </div>
                 </div>
                 <Button>Create New Key</Button>
