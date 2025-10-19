@@ -19,10 +19,13 @@ const recentUploads = [
 const Dashboard = () => {
   return (
     <DashboardLayout>
-      <div className="p-8">
+      {/* 👇 Add margin-left to offset the fixed sidebar */}
+      <div className="p-8 md:ml-64 ml-2  transition-all duration-300">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
-          <p className="text-muted-foreground">Welcome back! Here's your media overview.</p>
+          <p className="text-muted-foreground">
+            Welcome back! Here's your media overview.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -31,10 +34,14 @@ const Dashboard = () => {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between mb-4">
                   <stat.icon className="h-8 w-8 text-muted-foreground" />
-                  <span className="text-sm text-green-600 font-medium">{stat.change}</span>
+                  <span className="text-sm text-green-600 font-medium">
+                    {stat.change}
+                  </span>
                 </div>
                 <div className="text-2xl font-bold mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -47,12 +54,19 @@ const Dashboard = () => {
           <CardContent>
             <div className="space-y-4">
               {recentUploads.map((file, index) => (
-                <div key={index} className="flex items-center justify-between py-3 border-b border-border last:border-0">
+                <div
+                  key={index}
+                  className="flex items-center justify-between py-3 border-b border-border last:border-0"
+                >
                   <div>
                     <div className="font-medium">{file.name}</div>
-                    <div className="text-sm text-muted-foreground">{file.size}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {file.size}
+                    </div>
                   </div>
-                  <div className="text-sm text-muted-foreground">{file.date}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {file.date}
+                  </div>
                 </div>
               ))}
             </div>
